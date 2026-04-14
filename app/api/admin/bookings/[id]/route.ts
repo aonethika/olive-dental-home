@@ -4,14 +4,14 @@ import Booking from "@/models/booking";
 
 export async function PATCH(
   req: Request,
-  { params }: { params: Promise<{ id: string }> }
+  context: { params: Promise<{ id: string }> }
 ) {
   try {
     await dbConnect();
 
     const body = await req.json();
 
-    const { id } = await params;
+    const { id } = await context.params;
 
     const updated = await Booking.findByIdAndUpdate(
       id,
