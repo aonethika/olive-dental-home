@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Olive Dental Home | Ramanattukara, Calicut",
+  title: "Best Dental Clinic in Ramanattukara | Olive Dental Home Ramanattukara, Calicut",
   description:
-    "Olive Dental Home offers expert dental care in Ramanattukara, Calicut.",
+  "Olive Dental Home is a trusted dental clinic in Ramanattukara, Calicut offering expert dentists, advanced dental treatments, teeth cleaning, cosmetic dentistry, and online appointment booking. Visit our dental clinic in Ramanattukara for quality and modern dental care.",
 };
 
 export default function RootLayout({
