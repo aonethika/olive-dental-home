@@ -1,10 +1,12 @@
 "use client";
 
 import { useState, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 
 function Inner() {
   const searchParams = useSearchParams();
+  const router = useRouter();
+
   const token = searchParams.get("token");
 
   const [password, setPassword] = useState("");
@@ -25,6 +27,12 @@ function Inner() {
 
     setLoading(false);
     setMsg(data.message);
+
+    if (res.ok) {
+      setTimeout(() => {
+        router.push("/admin");
+      }, 1500);
+    }
   };
 
   return (
