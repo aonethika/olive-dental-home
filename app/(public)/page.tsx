@@ -9,7 +9,9 @@ export default function Home() {
       <ScrollReveal>
         <section className="max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-28 text-center">
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold text-emerald-950 mb-0 sm:mb-2 tracking-tight">
-            Olive Dental Home
+            <span className="text-emerald-500 font-black italic drop-shadow-md">
+                    O
+            </span>live Dental Home
           </h1>
 
           <p className="text-base sm:text-lg text-emerald-600 mb-3">

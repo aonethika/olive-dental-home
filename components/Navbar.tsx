@@ -21,10 +21,12 @@ export default function Navbar() {
           </button>
 
          
-
-          <Link href="/" className="hover:text-emerald-200 font-bold text-lg tracking-wide transition">
-             Olive Dental
-          </Link>
+        <Link
+        href="/"
+        className="text-lg font-medium tracking-wide transition hover:text-emerald-500"
+        >
+        <span className="text-emerald-500 font-bold">O</span>live Dental
+      </Link>
         </div>
 
         {/* Desktop Links */}

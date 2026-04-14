@@ -8,7 +8,7 @@ export default function Contact() {
     <main className="min-h-screen bg-gradient-to-b from-emerald-50 via-white to-gray-100">
       <section className="max-w-4xl mx-auto px-4 sm:px-6 py-3">
 
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 mt-10">
           <h1 className="text-4xl sm:text-5xl font-bold text-emerald-950">
             Contact Us
           </h1>
@@ -34,7 +34,7 @@ export default function Contact() {
               {phone}
             </a>
 
-            <p className="text-xs text-gray-400 mt-3">
+            <p className="text-xs text-gray-400 mt-2">
               Available for appointments & emergencies
             </p>
 

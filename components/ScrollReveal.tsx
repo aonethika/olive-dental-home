@@ -29,7 +29,6 @@ export default function ScrollReveal({
       },
       {
         threshold: 0.15,
-        rootMargin: "0px 0px -10% 0px",
       }
     );
 
@@ -37,30 +36,29 @@ export default function ScrollReveal({
     return () => observer.disconnect();
   }, [delay]);
 
-  const getHiddenState = () => {
+  const getHidden = () => {
     switch (direction) {
       case "up":
-        return "translate-y-10";
+        return "translate-y-6";
       case "down":
-        return "-translate-y-10";
+        return "-translate-y-6";
       case "left":
-        return "translate-x-10";
+        return "translate-x-6";
       case "right":
-        return "-translate-x-10";
+        return "-translate-x-6";
       default:
-        return "translate-y-10";
+        return "translate-y-6";
     }
   };
 
   return (
     <div
       ref={ref}
-      className={[
-        "will-change-transform transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]",
+      className={`transition-all duration-500 ease-out will-change-transform ${
         visible
-          ? "opacity-100 translate-x-0 translate-y-0 scale-100 blur-0"
-          : `opacity-0 scale-[0.97] blur-sm ${getHiddenState()}`,
-      ].join(" ")}
+          ? "opacity-100 translate-x-0 translate-y-0"
+          : `opacity-0 ${getHidden()}`
+      }`}
     >
       {children}
     </div>
