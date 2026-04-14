@@ -30,7 +30,7 @@ function Inner() {
 
     if (res.ok) {
       setTimeout(() => {
-        router.push("/admin");
+        router.push("/admin/login");
       }, 1500);
     }
   };
