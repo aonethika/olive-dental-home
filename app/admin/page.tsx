@@ -43,11 +43,22 @@ export default function BookingsPage() {
     setBookings(data.bookings);
   };
 
-  useEffect(() => {
-    fetchDoctors();
-    fetchBookings();
-  }, []);
+ useEffect(() => {
+  const load = async () => {
+    const [docRes, bookRes] = await Promise.all([
+      fetch("/api/admin/doctors"),
+      fetch("/api/admin/bookings"),
+    ]);
 
+    const docData = await docRes.json();
+    const bookData = await bookRes.json();
+
+    setDoctors(docData.doctors.filter((d: any) => d.isActive));
+    setBookings(bookData.bookings);
+  };
+
+  load();
+}, []);
   const createBooking = async () => {
     setLoading(true);
 
