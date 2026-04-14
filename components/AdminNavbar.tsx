@@ -43,8 +43,8 @@ if (
           </Link>
 
           <button
-          onClick={() => {
-            localStorage.removeItem("admin");
+          onClick={async () => {
+            await fetch("/api/admin/logout", { method: "POST" });
             window.location.href = "/admin/login";
           }}
           className="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-md text-sm font-medium transition"
