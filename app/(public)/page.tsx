@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Contact from "./contact/page";
+import Services from "./services/page";
 
 export default function Home() {
   return (
@@ -35,6 +37,12 @@ export default function Home() {
             View Services
           </Link>
         </div>
+      </section>
+      <section>
+        <Services/>
+      </section>
+      <section>
+        <Contact/>
       </section>
 
     </main>
