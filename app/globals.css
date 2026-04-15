@@ -7,6 +7,7 @@
   top: 0;
   font-size: 60px;
   transform: translateX(-50%);
+  z-index: 1;
 }
 
 /* ANIMATION CLASS */
@@ -30,4 +31,10 @@
     transform: translateX(-50%) translateY(35vh);
     opacity: 1;
   }
+}
+
+/* TEXT ABOVE TOOTH */
+.text {
+  position: relative;
+  z-index: 10;
 }

@@ -52,8 +52,8 @@ export default function PublicLayout({
         </div>
 
         {/* TOOTH */}
-        <div
-  className={`absolute left-1/2 -translate-x-1/2 text-6xl sm:text-7xl transition-all duration-1000 ease-out ${
+      <div
+  className={`absolute left-1/2 -translate-x-1/2 text-6xl sm:text-7xl transition-all duration-1000 ease-out z-0 ${
     stage >= 2
       ? "top-[62%] sm:top-[58%] opacity-100"
       : "top-[-120px] opacity-0"
