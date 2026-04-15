@@ -4,10 +4,15 @@ import type { NextRequest } from "next/server";
 export function middleware(req: NextRequest) {
   const token = req.cookies.get("token")?.value;
 
-  const isAdminRoute = req.nextUrl.pathname.startsWith("/admin");
-  const isLoginPage = req.nextUrl.pathname === "/admin/login";
+  const pathname = req.nextUrl.pathname;
 
-  if (isAdminRoute && !token && !isLoginPage) {
+  const isAdminRoute = pathname.startsWith("/admin");
+  const isPublicAdminPage =
+    pathname === "/admin/login" ||
+    pathname === "/admin/forgot-password" ||
+    pathname === "/admin/reset-password";
+
+  if (isAdminRoute && !token && !isPublicAdminPage) {
     return NextResponse.redirect(new URL("/admin/login", req.url));
   }
 
